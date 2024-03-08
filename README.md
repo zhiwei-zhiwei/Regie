@@ -4,6 +4,9 @@ Remember to import the libary to the project path.
 
 RECOMMENDATION: Use IntelliJ IDEA to access the project.
 
+In order to run the main, run the db/database-init.sql first, I provided some sample data set. Check the user table 
+in order to log in with the role of STUDENT or ADMIN, they have different responsibilities and functions. Please 
+follow the console's text instruction to run the program.
 
 For the Practicum 3, with the idea of S.O.L.I.D. I designed my project with multiple interface and apply the idea of 
 Strategy Pattern. 

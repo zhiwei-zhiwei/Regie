@@ -180,3 +180,56 @@ CREATE TABLE temp_user
     userPassword VARCHAR(255)                NOT NULL,
     type         ENUM ('STUDENT', 'FACULTY', 'ADMIN') NOT NULL
 );
+
+
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (1, 'CSCI101', 'Introduction to Computer Science', 'open', 30, 28, '001');
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (2, 'MATH201', 'Advanced Mathematics', 'open', 25, 23, '001');
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (3, 'PHYS301', 'Principles of Physics', 'open', 30, 15, '001');
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (11, 'CS1010', 'OOP', 'Closed', 15, 15, '001');
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (12, 'CSCI101', 'Introduction to Computer Science', 'open', 30, 29, '002');
+
+
+INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (3, 'Monday', '09:00', '11:00', 1);
+INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (4, 'Wednesday', '09:00', '11:00', 1);
+INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (5, 'Tuesday', '10:00', '12:00', 2);
+INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (6, 'Thursday', '10:00', '12:00', 2);
+INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (7, 'Monday', '09:00', '11:00', 3);
+
+
+INSERT INTO CourseManagement.courseLocation (id, building, room, course_id) VALUES (4, 'Science Building', '101', 1);
+INSERT INTO CourseManagement.courseLocation (id, building, room, course_id) VALUES (5, 'Math Building', '202', 2);
+INSERT INTO CourseManagement.courseLocation (id, building, room, course_id) VALUES (6, 'Physics Building', '303', 3);
+
+
+INSERT INTO CourseManagement.lab (id, labNum, course_id, status, labCapacity, currentLabCapacity) VALUES (1, 'S101', 1, 'open', 15, 14);
+INSERT INTO CourseManagement.lab (id, labNum, course_id, status, labCapacity, currentLabCapacity) VALUES (2, 'S102', 1, 'Closed', 15, 15);
+INSERT INTO CourseManagement.lab (id, labNum, course_id, status, labCapacity, currentLabCapacity) VALUES (3, 'S201', 2, 'open', 12, 10);
+INSERT INTO CourseManagement.lab (id, labNum, course_id, status, labCapacity, currentLabCapacity) VALUES (4, 'S202', 2, 'open', 13, 10);
+INSERT INTO CourseManagement.lab (id, labNum, course_id, status, labCapacity, currentLabCapacity) VALUES (5, 'S301', 3, 'open', 15, 7);
+
+INSERT INTO CourseManagement.sectionLocation (id, building, room, section_id) VALUES (4, 'Science Annex', '102', 1);
+INSERT INTO CourseManagement.sectionLocation (id, building, room, section_id) VALUES (5, 'Math Annex', '203', 2);
+INSERT INTO CourseManagement.sectionLocation (id, building, room, section_id) VALUES (6, 'Physics Annex', '304', 3);
+INSERT INTO CourseManagement.sectionLocation (id, building, room, section_id) VALUES (7, 'Chemistry Annex', '405', 4);
+INSERT INTO CourseManagement.sectionLocation (id, building, room, section_id) VALUES (8, 'Biology Annex', '506', 5);
+
+
+INSERT INTO CourseManagement.sectionSchedule (id, day, startTime, endTime, section_id) VALUES (4, 'Friday', '09:00', '10:30', 1);
+INSERT INTO CourseManagement.sectionSchedule (id, day, startTime, endTime, section_id) VALUES (5, 'Friday', '11:00', '12:30', 2);
+INSERT INTO CourseManagement.sectionSchedule (id, day, startTime, endTime, section_id) VALUES (6, 'Wednesday', '14:00', '15:30', 3);
+INSERT INTO CourseManagement.sectionSchedule (id, day, startTime, endTime, section_id) VALUES (7, 'Tuesday', '16:00', '17:30', 4);
+INSERT INTO CourseManagement.sectionSchedule (id, day, startTime, endTime, section_id) VALUES (8, 'Thursday', '18:00', '19:30', 5);
+
+
+INSERT INTO CourseManagement.user (id, userId, userName, userPassword, type) VALUES (1, '00001', 'student', 'student', 'STUDENT');
+INSERT INTO CourseManagement.user (id, userId, userName, userPassword, type) VALUES (2, '00002', 'admin', '123', 'ADMIN');
+
+
+INSERT INTO CourseManagement.courseEnrollments (id, courseNum, courseName, userId, sectionNum) VALUES (12, 'CS1010', 'OOP', 1, '001');
+INSERT INTO CourseManagement.courseEnrollments (id, courseNum, courseName, userId, sectionNum) VALUES (15, 'CSCI101', 'Introduction to Computer Science', 1, '001');
+
+
+INSERT INTO CourseManagement.labEnrollments (id, labNum, course_id, userId) VALUES (2, 'S101', 1, 1);
+INSERT INTO CourseManagement.labEnrollments (id, labNum, course_id, userId) VALUES (3, 'S101', 1, 1);
+INSERT INTO CourseManagement.labEnrollments (id, labNum, course_id, userId) VALUES (4, 'S101', 1, 1);
+
