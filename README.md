@@ -6,7 +6,10 @@ RECOMMENDATION: Use IntelliJ IDEA to access the project.
 
 In order to run the main, run the db/database-init.sql first, I provided some sample data set. Check the user table 
 in order to log in with the role of STUDENT or ADMIN, they have different responsibilities and functions. Please 
-follow the console's text instruction to run the program.
+follow the console's text instructions to run the program.
+
+For STUDENT view: Username: student, Password: student
+For ADMIN view: Username: admin, Password: 123
 
 For the Practicum 3, with the idea of S.O.L.I.D. I designed my project with multiple interface and apply the idea of 
 Strategy Pattern. 
