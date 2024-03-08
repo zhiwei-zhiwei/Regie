@@ -187,7 +187,8 @@ INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseC
 INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (3, 'PHYS301', 'Principles of Physics', 'open', 30, 15, '001');
 INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (11, 'CS1010', 'OOP', 'Closed', 15, 15, '001');
 INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (12, 'CSCI101', 'Introduction to Computer Science', 'open', 30, 29, '002');
-
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (12, 'CSCI102', 'lessThan5', 'open', 30, 3, '002');
+INSERT INTO CourseManagement.courses (id, courseNum, courseName, status, courseCapacity, currentCourseCapacity, sectionNum) VALUES (12, 'CSCI103', 'lessThan5', 'open', 10, 2, '002');
 
 INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (3, 'Monday', '09:00', '11:00', 1);
 INSERT INTO CourseManagement.courseSchedule (id, day, startTime, endTime, course_id) VALUES (4, 'Wednesday', '09:00', '11:00', 1);
